@@ -1,0 +1,72 @@
+{
+  "run_id": "20260818T222341Z",
+  "timestamp": "2026-08-18T22:23:41.522577+00:00",
+  "dataset": {
+    "source": "synthetic_multi_domain_kg",
+    "n_nodes": 47,
+    "n_edges": 402,
+    "n_triples": 220,
+    "n_questions_total": 150,
+    "n_train": 100,
+    "n_val": 20,
+    "n_test": 30
+  },
+  "config": {
+    "seed": 42,
+    "ablation_seeds": [
+      1,
+      2,
+      3
+    ],
+    "relation_noise_p": 0.3,
+    "top_k": 6,
+    "pretrain_epochs": 25,
+    "finetune_epochs": 55
+  },
+  "baselines": {
+    "random": {
+      "hits_at_k": 0.16666666666666666
+    },
+    "bfs": {
+      "hits_at_k": 0.06666666666666667
+    },
+    "tfidf_vector_rag": {
+      "hits_at_k": 0.1
+    },
+    "noisy_relation_lookup": {
+      "hits_at_k": 0.5666666666666667
+    }
+  },
+  "gnn_ablation": {
+    "GCN": {
+      "hits_at_k_mean": 0.3,
+      "hits_at_k_std": 0.0,
+      "mrr_mean": 0.15115686372130488,
+      "mrr_std": 0.00786818099031056,
+      "param_count": 3073
+    },
+    "GraphSAGE": {
+      "hits_at_k_mean": 0.6222222222222222,
+      "hits_at_k_std": 0.01571348402636772,
+      "mrr_mean": 0.23337653946787074,
+      "mrr_std": 0.006784359457874036,
+      "param_count": 6017
+    },
+    "GAT": {
+      "hits_at_k_mean": 0.3333333333333333,
+      "hits_at_k_std": 0.07200822998230957,
+      "mrr_mean": 0.16693203754377006,
+      "mrr_std": 0.014222853946770607,
+      "param_count": 37441
+    }
+  },
+  "best_architecture": "GraphSAGE",
+  "improvement_over_tfidf_baseline_x": 6.22,
+  "improvement_over_strongest_baseline_pct": 9.8,
+  "llm_generation": {
+    "provider_attempted": "ollama",
+    "mode_used": "not_tested_in_this_run",
+    "n_queries_tested": 0
+  },
+  "notes": "Synthetic benchmark graph (see README limitations section). Re-run against real HotpotQA (src/hotpot_loader.py) for literature-comparable numbers."
+}
