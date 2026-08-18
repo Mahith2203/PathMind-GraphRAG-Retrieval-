@@ -1,0 +1,68 @@
+{
+  "run_id": "",
+  "timestamp": "",
+  "dataset": {
+    "source": "",
+    "n_nodes": 0,
+    "n_edges": 0,
+    "n_triples": 0,
+    "n_questions_total": 0,
+    "n_train": 0,
+    "n_val": 0,
+    "n_test": 0
+  },
+  "config": {
+    "seed": 0,
+    "ablation_seeds": [],
+    "relation_noise_p": 0.0,
+    "top_k": 0,
+    "pretrain_epochs": 0,
+    "finetune_epochs": 0
+  },
+  "baselines": {
+    "random": {
+      "hits_at_k": 0.0
+    },
+    "bfs": {
+      "hits_at_k": 0.0
+    },
+    "tfidf_vector_rag": {
+      "hits_at_k": 0.0
+    },
+    "noisy_relation_lookup": {
+      "hits_at_k": 0.0
+    }
+  },
+  "gnn_ablation": {
+    "GCN": {
+      "hits_at_k_mean": 0.0,
+      "hits_at_k_std": 0.0,
+      "mrr_mean": 0.0,
+      "mrr_std": 0.0,
+      "param_count": 0
+    },
+    "GraphSAGE": {
+      "hits_at_k_mean": 0.0,
+      "hits_at_k_std": 0.0,
+      "mrr_mean": 0.0,
+      "mrr_std": 0.0,
+      "param_count": 0
+    },
+    "GAT": {
+      "hits_at_k_mean": 0.0,
+      "hits_at_k_std": 0.0,
+      "mrr_mean": 0.0,
+      "mrr_std": 0.0,
+      "param_count": 0
+    }
+  },
+  "best_architecture": "",
+  "improvement_over_tfidf_baseline_x": 0.0,
+  "improvement_over_strongest_baseline_pct": 0.0,
+  "llm_generation": {
+    "provider_attempted": "",
+    "mode_used": "",
+    "n_queries_tested": 0
+  },
+  "notes": ""
+}
