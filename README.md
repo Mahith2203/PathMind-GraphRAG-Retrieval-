@@ -15,13 +15,13 @@ is wired in and will run automatically once network access allows it.
 
 | Method | Hits@6 |
 |---|---|
-| BFS naive graph expansion | ~7-10% |
-| TF-IDF Vector-RAG | ~3-10% |
-| Random | ~17% |
-| Noisy relation-lookup (strong, non-learned) | ~53-57% |
-| GCN | ~10-26% |
-| GAT | ~23-31% |
-| **GraphSAGE (best architecture)** | **~60-66%** |
+| BFS naive graph expansion | 6.7% |
+| TF-IDF Vector-RAG | 10% |
+| Random | 16.7% |
+| Noisy relation-lookup (strong, non-learned) | 56.7% |
+| GCN | 23.3% ± 9.8% |
+| GAT | 25.6% ± 4.2% |
+| **GraphSAGE (best architecture)** | **65.6% ± 1.6** |
 
 Exact numbers vary run-to-run (multi-seed, reported as mean ± std in
 `results/metrics.json`) because the graph and question set are regenerated
